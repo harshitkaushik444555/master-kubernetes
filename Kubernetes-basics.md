@@ -53,3 +53,24 @@ Example:
 If there are two node N1 and N2. N1 is running container c1 and c2 and N2 is empty. If container c1 in N1 affect the
 c2 container then Kubernetes cluster like architecture will move c2 into N2 node and now c2 will not be affected by the c1. 
 ```
+
+How Kubernetes solves Auto Scaling problem?
+```
+Kubernetes has replication controller(old name)/replica set(new name).There are two ways to control replicas
+-increase replica in yaml file manually
+-HPA(Horizontal Pod Autoscalar): if load reaches the threshold the new container is spinned.
+```
+
+How kubernetes provide Auto Healing?
+```
+-Kubernetes controls and fix damage.
+-Kubernetes has auto scaling feature which start a new container before going down the first container.
+-Whenever API server receives a signal that the container is going down, immediately kubernetes will roll out the new
+container. And the end user will not get to know the container went dowm and a new container has come out.
+```
+
+How kubernetes provides enterprise level support?
+```
+It was developed by Google to meet the enterprise level standards but now is open source.
+```
+
