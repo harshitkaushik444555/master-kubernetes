@@ -20,7 +20,7 @@ Kubernetes is a enterprise level platform. It want to bring declarative capabili
 written in yaml file you have to master yaml.
 ```
 
-If you two container in one pod it will allow shared networking and storage. It means one container 
+If you have two containers in one pod it will allow shared networking and storage. It means one container 
 
 can talk to another container using localhost.
 
