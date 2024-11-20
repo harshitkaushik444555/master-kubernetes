@@ -6,7 +6,7 @@ To run a container in docker you do
 ```
 $docker run -d --name -p -v -network 
 ```
-all above is done in command line.
+All above is done in command line.
 
 But in k8s all above specification is written in pod.yml file
 
@@ -20,7 +20,7 @@ Kubernetes is a enterprise level platform. It want to bring declarative capabili
 written in yaml file you have to master yaml.
 ```
 
-If you two container in one pod it will allow shared networking and storag. It means one container 
+If you two container in one pod it will allow shared networking and storage. It means one container 
 
 can talk to another container using localhost.
 
