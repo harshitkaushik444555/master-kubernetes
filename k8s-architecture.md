@@ -11,6 +11,7 @@ for running your application. Using 3 components of worker node you have technic
 Pod
 ```
 A Pod is the smallest and simplest unit of deployment in Kubernetes. It serves as a wrapper around one or more containers.
+containers are the fundamental building blocks, while pods are the operational units in Kubernetes that manage and group containers.
 ```
 
 Following are Worker Node components:
@@ -76,4 +77,6 @@ It helps Kubernetes interact with cloud-specific resources like load balancers, 
 Example:
 For new cloud provider like new-cloud, the cloud provider should write a logic and should submit it on CCM.
 ```
+
+
 
