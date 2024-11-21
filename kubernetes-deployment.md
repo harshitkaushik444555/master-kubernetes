@@ -71,7 +71,7 @@ $ minikube ssh //it will login to your minikube cluster.
 
 $ curl 172.17.0.3 //your ruuing application will be seen. After deleting pod if you curl then you won't be able to
 
-see your application.
+see your application.This command only works inside minikube cluster i.e after doing minikube ssh
 
 Now write a deployment.yml file.
 
