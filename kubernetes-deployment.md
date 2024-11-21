@@ -65,19 +65,26 @@ Parallel deletion and creation of pod is called zero time deployment. RS create 
 
 Deployment commands:
 ```
-$ kubectl get all -A //wiil give all namespaces, all applications in your cluster.
+$ kubectl get all -A //will give all namespaces, all applications in your cluster.
+
 $ minikube ssh //it will login to your minikube cluster.
+
 $ curl 172.17.0.3 //your ruuing application will be seen. After deleting pod if you curl then you won't be able to
+
 see your application.
 
 Now write a deployment.yml file.
 
 $ kubectl get deploy
+
 $ kubectl get rs
+
 $ kubectl get pod
 
 $ kubectl delete pod <pod-name>
+
 before enter open new terminal and type:
+
 $ kubectl get pod -w // you now watch pod and what is happening with pod.
 
 Now increase replica set to 3 and save.
