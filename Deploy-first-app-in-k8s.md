@@ -36,9 +36,15 @@ Steps to create pods:
 
 -to install minikube and kubectl goto online documentation.
 
-$minikube start //will create k8s cluster
+$ minikube start //will create k8s cluster
 
-$kubectl get nodes
+When you run minikube start, by default, Minikube creates a single-node Kubernetes cluster. This means it
+starts with only one node, which acts as both the control plane (master) and the worker node.
+If you need more nodes in your cluster, you can use the --nodes flag:
+
+$ minikube start --nodes=<number_of_nodes> //not required for demo
+
+$ kubectl get nodes
 
 Now create pod:
 goto pod documentation(don't mug up things)
@@ -64,3 +70,19 @@ $kubectl scale deployment <deployment-name> --replicas=0
 Note: In yaml - hyphen indicates objects in a list.
 
 kubectl cheatsheet - very good documentation for commands
+
+
+Simple pod.yaml file
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+
+```
