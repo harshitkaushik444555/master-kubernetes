@@ -73,6 +73,9 @@ $ curl 172.17.0.3 //your ruuing application will be seen. After deleting pod if 
 
 see your application.This command only works inside minikube cluster i.e after doing minikube ssh
 
+To exit from an active Minikube SSH session, simply type:
+$ exit
+
 Now write a deployment.yml file.
 
 $ kubectl get deploy
@@ -94,3 +97,30 @@ $kubectl apply -f deployment.yaml //to save changes to deployment
 ```
 
 Additionally you can search for k8s deployment ecample on github.
+
+
+Simple deployment.yaml file:
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+
+```
