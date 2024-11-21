@@ -18,9 +18,9 @@ mechanism of k8s.
 
 So service provide load balancing capabilities while keeping track of newly created pod using service discovery mechanism.
 ```
-```
+
 ![image](https://github.com/user-attachments/assets/8c66be08-c89f-4725-a587-483b4af815b8)
-```
+
 
 Expose to the world
 ```
