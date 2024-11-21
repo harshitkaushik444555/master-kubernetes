@@ -86,3 +86,9 @@ spec:
     - containerPort: 80
 
 ```
+
+
+Use the following command to delete all resources (e.g., pods, services, deployments) in all namespaces in minikube
+```
+$ kubectl delete all --all --all-namespaces
+```
